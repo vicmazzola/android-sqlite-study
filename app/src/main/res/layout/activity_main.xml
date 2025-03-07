@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="26dp"
+        android:hint="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="22dp"
+        android:hint="@string/input_name"
+        android:inputType="text"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="22dp"
+        android:hint="@string/input_email"
+        android:inputType="textEmailAddress"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+
+    <EditText
+        android:id="@+id/input_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="22dp"
+        android:hint="@string/input_date"
+        android:inputType="date"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+    
+    <Button
+        android:id="@+id/app_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="22dp"
+        android:text="@string/app_button"
+        />
+
+
+    <TextView
+        android:id="@+id/texView_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/texView_result"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="26dp"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DataBaseStudy</string>
+    <string name="app_button">Button</string>
+    <string name="input_name">Type your name</string>
+    <string name="input_email">Type your email</string>
+    <string name="input_date">Type your birth date</string>
+    <string name="texView_result">Result here</string>
+</resources>
