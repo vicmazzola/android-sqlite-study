@@ -48,20 +48,24 @@ public class MainActivity extends AppCompatActivity {
             String email = editEmail.getText().toString();
             String date = editDate.getText().toString();
 
+            //delete all before add
+            database.execSQL("DELETE FROM users");
+
             database.execSQL("INSERT INTO users (name, email, birth_date) VALUES ('" + name + "', '" + email + "', '" + date + "')");
+
+
+            Cursor cursor = database.rawQuery("SELECT * FROM users", null);
+            StringBuilder result = new StringBuilder();
+            while (cursor.moveToNext()) {
+                result.append("Name: ").append(cursor.getString(0))
+                        .append("\nEmail: ").append(cursor.getString(1))
+                        .append("\nBirth Date: ").append(cursor.getString(2))
+                        .append("\n\n");
+            }
+            cursor.close();
+            textViewResult.setText(result.toString());
+
         });
-
-        Cursor cursor = database.rawQuery("SELECT * FROM users",null);
-        StringBuilder result = new StringBuilder();
-        while (cursor.moveToNext()) {
-            result.append("Name: ").append(cursor.getString(0))
-                    .append("\nEmail: ").append(cursor.getString(1))
-                    .append("\nBirth Date: ").append(cursor.getString(2))
-                    .append("\n\n");
-        }
-        cursor.close();
-        textViewResult.setText(result.toString());
-
 
 
     }
