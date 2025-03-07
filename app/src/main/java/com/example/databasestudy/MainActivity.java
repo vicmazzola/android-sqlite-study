@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         EditText editEmail = findViewById(R.id.input_email);
         EditText editDate = findViewById(R.id.input_date);
         Button buttonSave = findViewById(R.id.app_button);
-        TextView textViewResult = findViewById(R.id.texView_result);
+        TextView textViewResult = findViewById(R.id.textView_result);
 
         buttonSave.setOnClickListener(v -> {
             String name = editName.getText().toString();
