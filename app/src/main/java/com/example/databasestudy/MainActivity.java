@@ -54,9 +54,10 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor = database.rawQuery("SELECT * FROM users",null);
         StringBuilder result = new StringBuilder();
         while (cursor.moveToNext()) {
-            result.append("Name: ").append((cursor.getString(0)))
-                    .append("\nEmail: ").append((cursor.getString(1)))
-                    .append("\nBirth Date: ").append((cursor.getString(2)));
+            result.append("Name: ").append(cursor.getString(0))
+                    .append("\nEmail: ").append(cursor.getString(1))
+                    .append("\nBirth Date: ").append(cursor.getString(2))
+                    .append("\n\n");
         }
         cursor.close();
         textViewResult.setText(result.toString());
@@ -65,3 +66,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+
+
